@@ -11,6 +11,8 @@ output: html_document
 
 ```{r setup, echo=FALSE, include=FALSE, error=FALSE, echo=FALSE}
 
+# Note that this .Renviron should be run prior to compilation.
+
 knitr::opts_chunk$set(
   warning = FALSE, 
   message = FALSE,
@@ -41,3 +43,9 @@ knitr::opts_chunk$set(
 ```{r annexA, child='07-annexA.Rmd'}
 ```
 
+```{r save_repro_log}
+
+write(.libPaths(), file = '.libpaths')
+capture.output(sessionInfo(), file = '.sessioninfo')
+
+```

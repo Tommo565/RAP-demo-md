@@ -6,3 +6,10 @@ _main.Rmd
 libs/
 *.html
 *_files/
+
+
+# R log files
+
+.libpaths
+.sessioninfo
+.Rbuildignore
